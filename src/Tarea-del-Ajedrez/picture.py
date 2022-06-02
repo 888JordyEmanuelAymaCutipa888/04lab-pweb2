@@ -29,6 +29,14 @@ class Picture:
     horizontal = []
     lineaEspejo = ""
 
+    i = (len(aux)-1)
+    cont = 0
+    cantLineas = (len(aux[i])-1)
+
+    while i>=0:
+        linea = aux[cont];
+        lineaEspejo =  lineaEspejo + linea[i];
+        i -= 1;
 
     return Picture(horizontal)
 
