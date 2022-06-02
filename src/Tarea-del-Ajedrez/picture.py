@@ -37,6 +37,13 @@ class Picture:
         linea = aux[cont];
         lineaEspejo =  lineaEspejo + linea[i];
         i -= 1;
+        if i < 0:
+            horizontal.append(lineaEspejo)
+            lineaEspejo = ""
+            i = (len(aux[cont])-1)
+            cont += 1
+            if cont > cantLineas:
+                break
 
     return Picture(horizontal)
 
