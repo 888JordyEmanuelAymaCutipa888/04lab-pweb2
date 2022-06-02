@@ -16,12 +16,12 @@ class Picture:
     aux = self.img
     vertical = []
 
-    i = len(aux)
+    i = (len(aux)-1)
     while i>=0:
         vertical.append(aux[i])
         i -= 1;
 
-    return Picture(None)
+    return Picture(vertical)
 
   def horizontalMirror(self):
     """ Devuelve el espejo horizontal de la imagen """
