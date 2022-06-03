@@ -106,27 +106,33 @@ class Picture:
   def under(self, p):
     """ Devuelve una nueva figura poniendo la figura p sobre la
         figura actual """
-    aux = self.img
+    imagenActual = self.img
     immagenParametro = p.img
-    sobreUnion = []
+    arregloUnder = []
 
     cont = 0
-    limitLinea = len(aux[cont])
-    limitArreglo= len(aux)
+    limitLinea = len(imagenActual[cont])
+    limitArreglo = len(imagenActual)
     i = 0
 
     indicador = True
 
+    lineaDeUnder = ""
+
     while indicador:
+        caracterParametro = immagenParametro[cont][i]
+        if caracterParametro != " ":
+            lineaDeUnder = lineaDeUnder + caracterParametro
+        else:
+            lineaDeUnder = lineaDeUnder + imagenActual[cont][i]
         i += 1
-        cont += 1
         if i == limitLinea:
             i = 0
             cont += 1
             if cont == limitArreglo:
                 indicador = False
 
-    return Picture(None)
+    return Picture(arregloUnder)
   
   def horizontalRepeat(self, n):
     """ Devuelve una nueva figura repitiendo la figura actual al costado
