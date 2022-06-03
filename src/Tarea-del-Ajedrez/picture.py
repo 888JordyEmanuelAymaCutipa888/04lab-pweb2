@@ -106,6 +106,10 @@ class Picture:
   def under(self, p):
     """ Devuelve una nueva figura poniendo la figura p sobre la
         figura actual """
+    aux = self.img
+    immagenParametro = p.img
+    unionEncima = []
+
     return Picture(None)
   
   def horizontalRepeat(self, n):
