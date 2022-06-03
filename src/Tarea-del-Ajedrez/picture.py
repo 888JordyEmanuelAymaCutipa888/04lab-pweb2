@@ -49,6 +49,12 @@ class Picture:
 
   def negative(self):
     """ Devuelve un negativo de la imagen """
+    aux = self.img
+    horizontal = []
+    lineaNueva = ""
+
+
+
     return Picture(None)
 
   def join(self, p):
