@@ -95,9 +95,13 @@ class Picture:
     immagenParametro = p.img
     unionEncima = []
 
-    limite = (len(aux) + len(immagenParametro))
+    for linea in immagenParametro:
+        unionEncima.append(linea)
 
-    return Picture(None)
+    for linea in aux:
+        unionEncima.append(linea)
+
+    return Picture(unionEncima)
 
   def under(self, p):
     """ Devuelve una nueva figura poniendo la figura p sobre la
