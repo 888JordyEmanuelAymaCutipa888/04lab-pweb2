@@ -166,6 +166,27 @@ class Picture:
     return Picture(horizontalRepeat)
 
   def verticalRepeat(self, n):
+    imagenActual = self.img
+    verticalRepeat = []
+
+
+    repeticiones = 0
+    limitRepeticiones = n
+    limitArreglo = len(imagenActual)
+    i = 0
+
+    indicador = True
+
+    lineaRepeat = ""
+
+    while indicador:
+        verticalRepeat.append(imagenActual[i])
+        i += 1
+        if i == limitArreglo:
+            i = 0
+            repeticiones += 1
+            if repeticiones == limitRepeticiones:
+                indicador = False
     return Picture(None)
 
   #Extra: Sólo para realmente viciosos 
