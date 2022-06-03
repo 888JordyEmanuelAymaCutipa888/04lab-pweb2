@@ -50,12 +50,27 @@ class Picture:
   def negative(self):
     """ Devuelve un negativo de la imagen """
     aux = self.img
-    horizontal = []
+    negativeImagen = []
     lineaNueva = ""
 
+    cont = 0
+    i = (len(aux[cont])-1)
+    limite = (len(aux)-1)
+    caracter = "";
 
+    while i>=0:
+        caracter = aux[cont][i]
+        lineaNueva = inverter[caracter]  + lineaNueva
+        i -= 1;
+        if i < 0:
+            negativeImagen.append(lineaNueva)
+            lineaNueva = ""
+            i = (len(aux[cont])-1)
+            cont += 1
+            if cont > limite:
+                i = -1
 
-    return Picture(None)
+    return Picture(negativeImagen)
 
   def join(self, p):
     """ Devuelve una nueva figura poniendo la figura del argumento 
