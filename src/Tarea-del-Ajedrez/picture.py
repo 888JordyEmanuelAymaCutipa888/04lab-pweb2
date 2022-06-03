@@ -153,14 +153,17 @@ class Picture:
     lineaRepeat = ""
 
     while indicador:
+        lineaRepeat = lineaRepeat + imagenActual[cont]
         i += 1
         if i == limitRepeticiones:
+            horizontalRepeat.append(lineaRepeat)
+            lineaRepeat = ""
             i = 0
             cont += 1
             if cont == limitArreglo:
                 indicador = False
 
-    return Picture(None)
+    return Picture(horizontalRepeat)
 
   def verticalRepeat(self, n):
     return Picture(None)
