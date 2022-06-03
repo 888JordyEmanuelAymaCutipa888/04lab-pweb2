@@ -127,6 +127,8 @@ class Picture:
             lineaDeUnder = lineaDeUnder + imagenActual[cont][i]
         i += 1
         if i == limitLinea:
+            arregloUnder.append(lineaDeUnder)
+            lineaDeUnder = ""
             i = 0
             cont += 1
             if cont == limitArreglo:
