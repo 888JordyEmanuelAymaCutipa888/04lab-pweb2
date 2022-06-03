@@ -95,6 +95,8 @@ class Picture:
     immagenParametro = p.img
     unionEncima = []
 
+    limite = (len(aux) + len(immagenParametro))
+
     return Picture(None)
 
   def under(self, p):
