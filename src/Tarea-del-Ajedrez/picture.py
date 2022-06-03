@@ -60,7 +60,7 @@ class Picture:
 
     while i>=0:
         caracter = aux[cont][i]
-        lineaNueva = inverter[caracter]  + lineaNueva
+        lineaNueva = self._invColor(caracter) + lineaNueva
         i -= 1;
         if i < 0:
             negativeImagen.append(lineaNueva)
