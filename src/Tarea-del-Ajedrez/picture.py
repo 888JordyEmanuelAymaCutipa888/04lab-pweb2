@@ -108,7 +108,23 @@ class Picture:
         figura actual """
     aux = self.img
     immagenParametro = p.img
-    unionEncima = []
+    sobreUnion = []
+
+    cont = 0
+    limitLinea = len(aux[cont])
+    limitArreglo= len(aux)
+    i = 0
+
+    indicador = True
+
+    while indicador:
+        i += 1
+        cont += 1
+        if i == limitLinea:
+            i = 0
+            cont += 1
+            if cont == limitArreglo:
+                indicador = False
 
     return Picture(None)
   
