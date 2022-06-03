@@ -187,7 +187,7 @@ class Picture:
             repeticiones += 1
             if repeticiones == limitRepeticiones:
                 indicador = False
-    return Picture(None)
+    return Picture(verticalRepeat)
 
   #Extra: Sólo para realmente viciosos 
   def rotate(self):
