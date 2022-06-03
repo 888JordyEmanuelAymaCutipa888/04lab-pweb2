@@ -91,6 +91,10 @@ class Picture:
     return Picture(unionDerecha)
 
   def up(self, p):
+    aux = self.img
+    immagenParametro = p.img
+    unionEncima = []
+
     return Picture(None)
 
   def under(self, p):
